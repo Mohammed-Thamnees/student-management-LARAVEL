@@ -12,7 +12,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes(['register'=>false]);
 
-Route::get('/', function () {
-    return view('backend.index');
+
+Route::get('/','App\Http\Controllers\FrontendController@login')->name('login.form');
+Route::post('/login-submit','App\Http\Controllers\FrontendController@loginsubmit')->name('login.submit');
+Route::get('/logout','App\Http\Controllers\FrontendController@logout')->name('logout');
+
+
+
+Route::group(['middleware'=>['user']], function(){
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 });

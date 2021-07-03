@@ -1689,6 +1689,10 @@ footer p {
 .sidebar-menu ul ul a.active {
 	color: #18aefa;
 }
+.danger{
+	color: red;
+}
+
 .mobile_btn {
 	display: none;
 	float: left;

@@ -121,7 +121,7 @@
                 </div>
                 <a class="dropdown-item" href="profile.html">My Profile</a>
                 <a class="dropdown-item" href="inbox.html">Inbox</a>
-                <a class="dropdown-item" href="login.html">Logout</a>
+                <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
             </div>
         </li>
         <!-- /User Menu -->
